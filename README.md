@@ -12,7 +12,6 @@ Live site: https://msmith8846.github.io
 ## Pages
 - `index.html` — landing, about, experience, projects, skills, contact
 - `blackjack.html` — a browser rebuild of the original Java Blackjack project
-- `slapshot.html` — a canvas-based hockey mini-game
 
 ## Dev
 No build step. Open `index.html` in a browser, or serve locally:
