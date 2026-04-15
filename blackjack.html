@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackjack — Mario Smith</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/game.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230b1020'/%3E%3Ctext x='50' y='67' font-size='56' text-anchor='middle' fill='%2300d4ff' font-family='Arial' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+</head>
+<body class="felt-bg">
+  <header class="nav">
+    <a href="index.html" class="brand">
+      <span class="brand-mark">MS</span>
+      <span class="brand-text">Mario Smith</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#about">About</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="slapshot.html" class="nav-fun">🏒 Slapshot</a>
+    </nav>
+  </header>
+
+  <main class="game-wrap">
+    <div class="game-head">
+      <p class="eyebrow">Project · Originally Java, rebuilt for the web</p>
+      <h1>Blackjack</h1>
+      <p class="game-sub">Dealer stands on 17. 6 decks. Ace is 11 or 1. Blackjack pays 3:2.</p>
+    </div>
+
+    <div class="hud">
+      <div class="hud-card"><span>Bankroll</span><strong id="bankroll">$500</strong></div>
+      <div class="hud-card"><span>Bet</span><strong id="bet">$25</strong></div>
+      <div class="hud-card"><span>Hands played</span><strong id="hands">0</strong></div>
+      <div class="hud-card"><span>Record</span><strong><span id="wins">0</span>W / <span id="losses">0</span>L / <span id="pushes">0</span>P</strong></div>
+    </div>
+
+    <div class="table" id="table">
+      <div class="seat dealer-seat">
+        <div class="seat-label">Dealer <span id="dealer-score" class="score"></span></div>
+        <div class="hand" id="dealer-hand"></div>
+      </div>
+
+      <div class="felt-logo">MS ♠ ♥ ♣ ♦</div>
+
+      <div class="seat player-seat">
+        <div class="seat-label">You <span id="player-score" class="score"></span></div>
+        <div class="hand" id="player-hand"></div>
+      </div>
+    </div>
+
+    <div class="message" id="message">Place your bet and click <em>Deal</em>.</div>
+
+    <div class="controls">
+      <div class="bet-row">
+        <button class="chip chip-5" data-bet="5">5</button>
+        <button class="chip chip-25" data-bet="25">25</button>
+        <button class="chip chip-100" data-bet="100">100</button>
+        <button class="chip chip-500" data-bet="500">500</button>
+        <button id="clear-bet" class="btn btn-ghost">Clear</button>
+      </div>
+      <div class="action-row">
+        <button id="deal" class="btn btn-primary">Deal</button>
+        <button id="hit" class="btn btn-ghost" disabled>Hit</button>
+        <button id="stand" class="btn btn-ghost" disabled>Stand</button>
+        <button id="double" class="btn btn-ghost" disabled>Double</button>
+        <button id="reset" class="btn btn-ghost">Reset Bankroll</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html">← Back to portfolio</a>
+      <span class="footer-tag">♠ Built in vanilla JS</span>
+    </div>
+  </footer>
+
+  <script src="js/blackjack.js"></script>
+</body>
+</html>

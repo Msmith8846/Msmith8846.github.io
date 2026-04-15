@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mario Smith — Computer Information Systems student at Niagara University. Java & Python developer, hockey player, Eagle Scout." />
+  <meta name="theme-color" content="#0b1020" />
+  <title>Mario Smith — CIS Student, Developer & Hockey Player</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%230b1020'/%3E%3Ctext x='50' y='67' font-size='56' text-anchor='middle' fill='%2300d4ff' font-family='Arial' font-weight='bold'%3EM%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="nav" id="nav">
+    <a href="#home" class="brand" aria-label="Home">
+      <span class="brand-mark">MS</span>
+      <span class="brand-text">Mario Smith</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+      <span class="nav-divider" aria-hidden="true"></span>
+      <a href="blackjack.html" class="nav-fun">♠ Blackjack</a>
+      <a href="slapshot.html" class="nav-fun">🏒 Slapshot</a>
+    </nav>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-inner">
+        <p class="eyebrow">Pittsburgh, PA · Niagara University '28</p>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Mario Smith</span>.
+        </h1>
+        <p class="hero-sub">
+          I'm a <span id="typed" class="typed"></span><span class="caret">|</span>
+        </p>
+        <p class="hero-desc">
+          Computer Information Systems major at Niagara University. I build software,
+          lead teams, and chase pucks. Honors Program · GPA 3.76 · Eagle Scout.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">See my work</a>
+          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+          <a href="assets/mario-smith-resume.pdf" class="btn btn-ghost" download>↓ Resume</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>3.76</strong><span>GPA</span></div>
+          <div><strong>5+</strong><span>Years leadership</span></div>
+          <div><strong>2028</strong><span>Graduation</span></div>
+          <div><strong>∞</strong><span>Hockey</span></div>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">scroll ↓</div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2>About me</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>
+            I'm an organized, motivated learner who thrives on solving problems — whether
+            that's debugging a stubborn Java GUI at 1 a.m. or running a back-of-house at
+            Chick-fil-A during a Friday rush.
+          </p>
+          <p>
+            At <strong>Niagara University</strong> I study Computer Information Systems
+            with a Spanish minor, and I'm part of the <strong>University Honors
+            Program</strong>. Outside of class you'll usually find me on the ice with
+            <strong>ACHA D2 Club Hockey</strong>, on a golf course, or building something
+            in Java or Python.
+          </p>
+          <p>
+            I'm looking for an <strong>internship</strong> where I can combine my
+            technical skills, leadership background, and love of competition to ship
+            something real.
+          </p>
+          <ul class="about-facts">
+            <li><span>🎓</span> CIS Major · Spanish Minor · Honors</li>
+            <li><span>🏒</span> ACHA D2 · Texas Brahmas ('22–'23) · Elmira Impact ('23–'24)</li>
+            <li><span>🦅</span> Eagle Scout · Order of the Arrow Honor Society</li>
+            <li><span>🏆</span> Broadcom MASTERS Award recipient</li>
+          </ul>
+        </div>
+        <div class="about-card tilt" data-tilt>
+          <div class="about-card-head">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="file-name">mario.json</span>
+          </div>
+<pre class="code"><span class="k">const</span> <span class="v">mario</span> = {
+  <span class="p">name</span>: <span class="s">"Mario Smith"</span>,
+  <span class="p">location</span>: <span class="s">"Pittsburgh, PA"</span>,
+  <span class="p">school</span>: <span class="s">"Niagara University"</span>,
+  <span class="p">major</span>: <span class="s">"Computer Information Systems"</span>,
+  <span class="p">minor</span>: <span class="s">"Spanish"</span>,
+  <span class="p">gpa</span>: <span class="n">3.76</span>,
+  <span class="p">stack</span>: [<span class="s">"Java"</span>, <span class="s">"Python"</span>, <span class="s">"SQL"</span>, <span class="s">"GUI"</span>],
+  <span class="p">hockey</span>: <span class="b">true</span>,
+  <span class="p">openTo</span>: <span class="s">"Summer '26 Internships"</span>
+};</pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2>Experience</h2>
+      </div>
+      <div class="timeline">
+        <article class="tl-item" data-reveal>
+          <div class="tl-dot"></div>
+          <div class="tl-meta">Aug 2025 — Present</div>
+          <div class="tl-body">
+            <h3>Back-of-House Team Lead <span class="tl-org">· Chick-fil-A, Niagara Falls NY</span></h3>
+            <ul>
+              <li>Position team members to deliver orders accurately under high volume.</li>
+              <li>Coach staff to hit efficiency and quality targets each shift.</li>
+              <li>Shift staffing on the fly to fill gaps as sales volume changes.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item" data-reveal>
+          <div class="tl-dot"></div>
+          <div class="tl-meta">Mar 2020 — Aug 2025</div>
+          <div class="tl-body">
+            <h3>Shift Supervisor <span class="tl-org">· Subway, Pittsburgh PA</span></h3>
+            <ul>
+              <li>Supervised crews of 2–3 covering prep, sandwich line, and customer service.</li>
+              <li>Trained new hires and rolled out Subway's operations manual on shift.</li>
+              <li>Owned inventory tracking and placed food orders tied to demand.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="tl-item" data-reveal>
+          <div class="tl-dot"></div>
+          <div class="tl-meta">Aug 2022 — May 2028</div>
+          <div class="tl-body">
+            <h3>B.S. Computer Information Systems <span class="tl-org">· Niagara University</span></h3>
+            <ul>
+              <li>GPA 3.76 · University Honors Program · Minor in Spanish.</li>
+              <li>Club Hockey (ACHA D2), Club Golf.</li>
+              <li>Coursework: Java, Python, databases, systems analysis, algorithms.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="projects-grid">
+        <a class="proj-card" href="blackjack.html" data-reveal>
+          <div class="proj-art art-blackjack" aria-hidden="true">
+            <div class="cards-stack">
+              <div class="mini-card red">A♥</div>
+              <div class="mini-card">K♠</div>
+              <div class="mini-card red">Q♦</div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <h3>Blackjack — Reborn</h3>
+            <p>Originally built as a Java console game for class. I rebuilt it in JavaScript so you can play it right in the browser. Hit, stand, double, shuffle, the works.</p>
+            <div class="tags"><span>JavaScript</span><span>Canvas</span><span>Game Logic</span></div>
+            <span class="proj-link">Play now →</span>
+          </div>
+        </a>
+
+        <a class="proj-card" href="slapshot.html" data-reveal>
+          <div class="proj-art art-hockey" aria-hidden="true">
+            <div class="puck"></div>
+            <div class="stick"></div>
+            <div class="net"></div>
+          </div>
+          <div class="proj-body">
+            <h3>Slapshot</h3>
+            <p>A browser mini-game where you aim and rip a puck past a moving goalie. Built with HTML Canvas and vanilla JS physics. High score saved locally.</p>
+            <div class="tags"><span>Canvas</span><span>Physics</span><span>JavaScript</span></div>
+            <span class="proj-link">Take a shot →</span>
+          </div>
+        </a>
+
+        <div class="proj-card static" data-reveal>
+          <div class="proj-art art-gui" aria-hidden="true">
+            <div class="calc">
+              <div class="calc-screen">3.76</div>
+              <div class="calc-grid">
+                <span>7</span><span>8</span><span>9</span><span class="op">÷</span>
+                <span>4</span><span>5</span><span>6</span><span class="op">×</span>
+                <span>1</span><span>2</span><span>3</span><span class="op">−</span>
+                <span>0</span><span>.</span><span class="op">=</span><span class="op">+</span>
+              </div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <h3>GUI Calculator</h3>
+            <p>Java Swing calculator app — my first real GUI. Handled keyboard input, chained operations, and a clean layout grid.</p>
+            <div class="tags"><span>Java</span><span>Swing</span><span>GUI</span></div>
+            <span class="proj-link muted">Coursework</span>
+          </div>
+        </div>
+
+        <div class="proj-card static" data-reveal>
+          <div class="proj-art art-db" aria-hidden="true">
+            <div class="db-rows">
+              <div></div><div></div><div></div><div></div>
+            </div>
+          </div>
+          <div class="proj-body">
+            <h3>Database Projects</h3>
+            <p>Hands-on work with Microsoft Access and remote SQL (GoogieHost, myFreeSQLdatabase) — schema design, queries, forms, and reports.</p>
+            <div class="tags"><span>SQL</span><span>Access</span><span>Data</span></div>
+            <span class="proj-link muted">Coursework</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2>Skills</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-col">
+          <h3>Languages</h3>
+          <div class="skill"><span>Java</span><div class="bar"><i style="--w:80%"></i></div></div>
+          <div class="skill"><span>Python</span><div class="bar"><i style="--w:75%"></i></div></div>
+          <div class="skill"><span>SQL</span><div class="bar"><i style="--w:70%"></i></div></div>
+          <div class="skill"><span>JavaScript</span><div class="bar"><i style="--w:55%"></i></div></div>
+          <div class="skill"><span>Spanish</span><div class="bar"><i style="--w:65%"></i></div></div>
+        </div>
+        <div class="skill-col">
+          <h3>Tools & Platforms</h3>
+          <div class="skill"><span>Microsoft Access</span><div class="bar"><i style="--w:80%"></i></div></div>
+          <div class="skill"><span>Git / GitHub</span><div class="bar"><i style="--w:70%"></i></div></div>
+          <div class="skill"><span>Java Swing (GUI)</span><div class="bar"><i style="--w:75%"></i></div></div>
+          <div class="skill"><span>Remote SQL hosts</span><div class="bar"><i style="--w:65%"></i></div></div>
+        </div>
+        <div class="skill-col">
+          <h3>Off the keyboard</h3>
+          <ul class="pill-list">
+            <li>Team leadership</li>
+            <li>Operations & scheduling</li>
+            <li>Training new hires</li>
+            <li>Inventory management</li>
+            <li>Public speaking</li>
+            <li>Eagle Scout project PM</li>
+            <li>Bilingual-friendly (Spanish)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="awards">
+        <h3>Achievements</h3>
+        <div class="award-grid">
+          <div class="award"><span class="a-emoji">🦅</span><strong>Eagle Scout</strong><em>July 2022</em></div>
+          <div class="award"><span class="a-emoji">🏅</span><strong>Order of the Arrow</strong><em>June 2021</em></div>
+          <div class="award"><span class="a-emoji">🔬</span><strong>Broadcom MASTERS</strong><em>May 2018</em></div>
+          <div class="award"><span class="a-emoji">🏒</span><strong>Texas Brahmas</strong><em>2022–2023</em></div>
+          <div class="award"><span class="a-emoji">🏒</span><strong>Elmira Impact</strong><em>2023–2024</em></div>
+          <div class="award"><span class="a-emoji">🎓</span><strong>NU Honors Program</strong><em>2022–Present</em></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2>Let's connect</h2>
+      </div>
+      <p class="contact-lead">
+        Hiring, scouting, or just want to talk hockey? My inbox is open.
+      </p>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:mfsmith8846@gmail.com">
+          <span class="contact-icon">✉</span>
+          <strong>Email</strong>
+          <span class="contact-val">mfsmith8846@gmail.com</span>
+        </a>
+        <a class="contact-card" href="tel:+14127202110">
+          <span class="contact-icon">☎</span>
+          <strong>Phone</strong>
+          <span class="contact-val">(412) 720-2110</span>
+        </a>
+        <a class="contact-card" href="https://github.com/Msmith8846" target="_blank" rel="noopener">
+          <span class="contact-icon">⌨</span>
+          <strong>GitHub</strong>
+          <span class="contact-val">@Msmith8846</span>
+        </a>
+        <div class="contact-card static">
+          <span class="contact-icon">📍</span>
+          <strong>Based in</strong>
+          <span class="contact-val">Pittsburgh, PA / Niagara Falls, NY</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>© <span id="year"></span> Mario Smith</span>
+      <span class="footer-tag">Built from scratch · hosted on GitHub Pages</span>
+      <button id="konami-hint" class="konami-hint" aria-label="Secret hint">try ↑↑↓↓←→←→BA</button>
+    </div>
+  </footer>
+
+  <div id="konami-overlay" class="konami-overlay" aria-hidden="true">
+    <div class="konami-inner">
+      <h3>🏒 Going top shelf 🏒</h3>
+      <p>You found the cheat code. Click for a slapshot.</p>
+      <a href="slapshot.html" class="btn btn-primary">Take the shot</a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
